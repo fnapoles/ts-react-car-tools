@@ -1,0 +1,14 @@
+@import '../../config/variables';
+
+.dashboard {
+  text-align: center;
+}
+
+.title {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-family: $menuItemsFont;
+  color: $primaryColor;
+}

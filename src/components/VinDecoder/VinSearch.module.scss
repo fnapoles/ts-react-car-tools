@@ -1,0 +1,44 @@
+@import '../../config/variables.scss';
+
+.search {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+.vinSearchInput {
+  border-radius: 20px;
+  border-color: $fontGray;
+  margin-bottom: 15px;
+  min-width: 20vw;
+  padding: 10px;
+  color: $fontGray;
+  text-align: center;
+  font-size: $fontSize;
+  text-transform: uppercase;
+}
+
+.vinSearchButton {
+  border-radius: 5px;
+  border-color: $primaryColor;
+  margin-bottom: 15px;
+  padding: 10px;
+  color: $secondaryColor;
+  background-color: $primaryColor;
+  text-align: center;
+  font-size: $fontSize;
+  min-width: 20vw;
+  cursor: pointer;
+}
+
+.vinSearchButton:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.invalid {
+  color: red;
+}

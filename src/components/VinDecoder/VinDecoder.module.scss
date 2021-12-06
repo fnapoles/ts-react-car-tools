@@ -1,0 +1,15 @@
+@import '../../config/variables';
+
+.vinDecoder {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-family: $menuItemsFont;
+  color: $primaryColor;
+}

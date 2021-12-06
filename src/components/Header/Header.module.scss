@@ -1,0 +1,21 @@
+@import '../../config/variables';
+
+$headerPFont: #b3efff;
+
+.header {
+  font-family: $menuItemsFont;
+  font-size: larger;
+  font-weight: bolder;
+  background-color: $primaryColor;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+}
+
+.link {
+  margin-left: 50px;
+  text-decoration: none;
+  color: $headerPFont;
+}
