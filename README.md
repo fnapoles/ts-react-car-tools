@@ -1,6 +1,6 @@
 # Description
 
-This repository is the TypeScript version of the React web application that consumes the Department of Transportation - VIN Decoder API.
+This repository is a react web application written using TypeScript. It implements tools to facilitate the operation of vehicle-related businesses.
 
 # Software Technologies
 

@@ -18,9 +18,12 @@ export const VinSearch = ({ getDetails }: VinSearchProps): JSX.Element => {
   const [enteredText, setEnteredText] = useState('');
   const [isVinValid, setIsVinValid] = useState(true);
   const [isFirstRun, setIsFirstRun] = useState(true);
+  const [isPending, setIsPending] = useState(false);
+
   const vinLength: number = 17;
 
   const onSearchClick = async () => {
+    setIsPending(true);
     setIsVinValid(true);
     if (validateVin(enteredText)) {
       const response = await getData(`${vinUrl}${enteredText}${vinOptions}`);
@@ -30,6 +33,7 @@ export const VinSearch = ({ getDetails }: VinSearchProps): JSX.Element => {
         setIsVinValid(false);
       }
     }
+    setIsPending(false);
   };
 
   useEffect(() => {
@@ -62,7 +66,7 @@ export const VinSearch = ({ getDetails }: VinSearchProps): JSX.Element => {
           onClick={onSearchClick}
           disabled={!isVinValid}
         >
-          Search
+          {isPending ? 'Pending...' : 'Search'}
         </button>
         {!isVinValid && (
           <div className={classes.invalid}>Invalid VIN number</div>

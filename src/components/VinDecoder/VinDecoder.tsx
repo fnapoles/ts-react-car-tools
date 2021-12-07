@@ -3,6 +3,7 @@ import { useState, useCallback, FunctionComponent } from 'react';
 import { VinDetails } from './VinDetails';
 import { VinSearch } from './VinSearch';
 import { Variable } from './VinSearch';
+import { Title } from '../title/Title';
 
 export const VinDecoder: FunctionComponent = (): JSX.Element => {
   const [vinInfo, setVinInfo] = useState<Variable[]>();
@@ -13,7 +14,7 @@ export const VinDecoder: FunctionComponent = (): JSX.Element => {
 
   return (
     <div className={classes.vinDecoder}>
-      <div className={classes.title}>VIN Decoder</div>
+      <Title title="VIN Decoder" />
       <VinSearch getDetails={getDetailsHandler} />
       {vinInfo !== undefined && <VinDetails variables={vinInfo} />}
     </div>
